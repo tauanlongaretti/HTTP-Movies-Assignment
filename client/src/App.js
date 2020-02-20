@@ -7,9 +7,14 @@ import UpdateMovieForm from "./Movies/UpdateMovieForm";
 
 const App = () => {
   const [savedList, setSavedList] = useState([]);
+  const [updateMovie, setUpdateMovie] = useState([]);
 
   const addToSavedList = movie => {
     setSavedList([...savedList, movie]);
+  };
+
+  const addToUpdateMovie = movie => {
+    setUpdateMovie([...updateMovie, movie]);
   };
 
   return (
@@ -19,13 +24,13 @@ const App = () => {
       <Route
         path="/movies/:id"
         render={props => {
-          return <Movie {...props} addToSavedList={addToSavedList} />;
+          return <Movie {...props} addToSavedList={addToSavedList} addToUpdateMovie={addToUpdateMovie} />;
         }}
       />
       <Route path="/update-movie/:id" 
-        render={props => (
-          <UpdateMovieForm {...props} component={UpdateMovieForm}/>
-        )}
+        render={props => {
+          return <UpdateMovieForm {...props} list={updateMovie} updateMovie={updateMovie} setUpdateMovie={setUpdateMovie} />
+        }}
       />
     </>
   );
