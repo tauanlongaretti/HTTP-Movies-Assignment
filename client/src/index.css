@@ -55,27 +55,40 @@ body {
 }
 .save-button {
   position: absolute;
-  top: 25px;
+  top: 50px;
   right: 25px;
   border: 1px solid grey;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: #00e673;
 }
 .save-button:hover {
-  background-color: green;
+  background-color:#008040;
   color: white;
 }
 
 .edit-button {
   position: absolute;
-  top: 70px;
+  top: 110px;
   right: 25px;
   border: 1px solid grey;
   padding: 5px 15px;
-  background-color: lightseagreen;
+  background-color: #ffcc66;
 }
 .edit-button:hover {
-  background-color: green;
+  background-color: #cc8800;
+  color: white;
+}
+
+.delete-button {
+  position: absolute;
+  top: 170px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 6px;
+  background-color: #ff4d4d;
+}
+.delete-button:hover {
+  background-color: #990000;
   color: white;
 }
 

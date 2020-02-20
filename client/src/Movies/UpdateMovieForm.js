@@ -39,12 +39,11 @@ const UpdateMovieForm = props => {
         .put(`http://localhost:5000/api/movies/${updateMovie.id}`, updateMovie)
         .then(res => {
             console.log(res);
-            props.editMovie(res.data);
+            props.history.push("/")
         })
         .catch(err => {
             console.log(err)
         })
-        props.history.push("/")
   };
 
   return (
