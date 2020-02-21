@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
+import styled from "styled-components";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
+
 export default class MovieList extends Component {
   constructor(props) {
     super(props);
@@ -30,8 +37,8 @@ export default class MovieList extends Component {
 
 function MovieDetails({ movie }) {
   return (
-    <Link to={`/movies/${movie.id}`}>
+    <StyledLink to={`/movies/${movie.id}`}>
       <MovieCard movie={movie} />
-    </Link>
+    </StyledLink>
   );
 }
